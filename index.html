@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your CRFM App</title>
+  <script>
+    const ua = navigator.userAgent || navigator.vendor || window.opera;
+    if (/android/i.test(ua)) {
+      window.location.href = "https://play.google.com/store/apps/details?id=com.codewai.radios.uk.crfm";
+    } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+      window.location.href = "https://apps.apple.com/gb/app/your-crfm/id6480926565";
+    } else {
+      window.location.href = "https://yourcrfm.co.uk";
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting to the right app store...</p>
+</body>
+</html>
