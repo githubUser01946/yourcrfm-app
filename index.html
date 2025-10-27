@@ -73,6 +73,7 @@
     .listen-btn:hover {
       background-color: #ff8533;
       transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 102, 0, 0.7);
     }
 
     @keyframes pulse {
@@ -81,32 +82,6 @@
       100% { transform: scale(1); opacity: 1; }
     }
   </style>
-
-  <script>
-    window.onload = () => {
-      const ua = navigator.userAgent || navigator.vendor || window.opera;
-      const isAndroid = /android/i.test(ua);
-      const isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
-
-      const google = document.getElementById("google");
-      const apple = document.getElementById("apple");
-      const listen = document.getElementById("listen");
-
-      // Show buttons based on device
-      if (isAndroid) {
-        apple.style.display = "none";
-        listen.style.display = "none";
-      } else if (isIOS) {
-        google.style.display = "none";
-        listen.style.display = "none";
-      } else {
-        // Desktop or other device
-        google.style.display = "inline-block";
-        apple.style.display = "inline-block";
-        listen.style.display = "inline-block";
-      }
-    };
-  </script>
 </head>
 <body>
   <img src="logo.jpg" alt="Your CRFM Logo" class="logo">
@@ -114,14 +89,14 @@
   <p>Download for free or listen live online</p>
 
   <div class="store-buttons">
-    <a id="google" href="https://play.google.com/store/apps/details?id=com.codewai.radios.uk.crfm" target="_blank">
+    <a href="https://play.google.com/store/apps/details?id=com.codewai.radios.uk.crfm" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
     </a>
-    <a id="apple" href="https://apps.apple.com/gb/app/your-crfm/id6480926565" target="_blank">
+    <a href="https://apps.apple.com/gb/app/your-crfm/id6480926565" target="_blank">
       <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
     </a>
   </div>
 
-  <a id="listen" class="listen-btn" href="https://yourcrfm.co.uk/?radio_player=2" target="_blank" style="display:none;">🎧 Listen Online</a>
+  <a class="listen-btn" href="https://yourcrfm.co.uk/?radio_player=2" target="_blank">🎧 Listen Online</a>
 </body>
 </html>
