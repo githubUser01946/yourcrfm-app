@@ -89,4 +89,22 @@
         appleBtn.style.display = "none";
       } else if (isIOS) {
         googleBtn.style.display = "none";
-      } else
+      } else {
+        // Desktop or other device - show all buttons
+        googleBtn.style.display = "inline-block";
+        appleBtn.style.display = "inline-block";
+        listenBtn.style.display = "inline-block";
+      }
+    };
+  </script>
+</head>
+<body>
+  <img src="logo.jpg" alt="Your CRFM Logo" class="logo">
+  <h1>Get the Your CRFM App</h1>
+  <p>Choose your platform below or listen live online.</p>
+
+  <a id="google" class="button google" href="https://play.google.com/store/apps/details?id=com.codewai.radios.uk.crfm" target="_blank">Get it on Google Play</a>
+  <a id="apple" class="button apple" href="https://apps.apple.com/gb/app/your-crfm/id6480926565" target="_blank">Download on the App Store</a>
+  <a id="listen" class="button listen" href="https://yourcrfm.co.uk/?radio_player=2" target="_blank" style="display:none;">🎧 Listen Online</a>
+</body>
+</html>
